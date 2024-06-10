@@ -1,0 +1,9 @@
+Início de aula
+git clone https://github.com/Lunodavincci/tasks.git
+entre na pasta criada após clonar
+git config user.email "estevamraul07@gmail.com"
+git config user.name "Lunodavincci"
+Final da aula
+git add . 
+git commit -m "oq vc fez no codigo"
+git push origin main
