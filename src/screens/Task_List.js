@@ -5,6 +5,7 @@ import moment from "moment" //biblioteca de datas
 import 'moment/locale/pt-br' //formatação para pt-br
 
 import today_Image from "../../assets/imgs/today.jpg"
+import Task from "../components/Task"
 
 export default class Task_List extends Component {
     render() {
@@ -18,7 +19,16 @@ export default class Task_List extends Component {
                     </View>
                 </ImageBackground>
                 <View style={styles.taskList}>
-                    <Text>Lista de tarefas</Text>
+                    <Task
+                        description={"terminar TCC"}
+                        estimate_at={new Date()}
+                        done_at={new Date()}
+                    />
+                    <Task
+                        description={"apresentar TCC"}
+                        estimate_at={new Date()}
+                        done_at={null}
+                    />
                 </View>
             </View>
         )
