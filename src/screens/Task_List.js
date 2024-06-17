@@ -10,25 +10,23 @@ import Task from "../components/Task"
 export default class Task_List extends Component {
     render() {
         const today = moment().locale('pt-br').format('ddd, D [de] MMM')
-        return (
-            <View style={styles.container}>
-                <ImageBackground source={today_Image} style={styles.background}>
-                    <View style={styles.titleBar}>
-                        <Text style={style.title}>Hoje</Text>
-                        <Text style={style.subTitle}>{today}</Text>
-                    </View>
-                </ImageBackground>
+            return (
+                <View style={styles.container}>
+                    <ImageBackground source={today_Image} style={styles.background}>
+                        <View style={styles.titleBar}>
+                            <Text style={style.title}>Hoje</Text>
+                            <Text style={style.subTitle}>{today}</Text>
+                        </View>
+                    </ImageBackground>
                 <View style={styles.taskList}>
                     <Task
                         description={"terminar TCC"}
                         estimate_at={new Date()}
-                        done_at={new Date()}
-                    />
+                        done_at={new Date()}/>
                     <Task
                         description={"apresentar TCC"}
                         estimate_at={new Date()}
-                        done_at={null}
-                    />
+                        done_at={null}/>
                 </View>
             </View>
         )
